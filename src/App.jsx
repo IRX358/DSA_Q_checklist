@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Download, Trash2, Github, ShieldCheck, ListChecks, LayoutDashboard, RotateCcw } from 'lucide-react';
+import { Terminal, Download, Trash2, Github, Route, LayoutDashboard, RotateCcw, BookOpen, Code2} from 'lucide-react';
 import Dashboard from './components/Dashboard';
 import QuestionTable from './components/QuestionTable';
 
@@ -76,9 +76,19 @@ const App = () => {
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>Clear</span>
             </button>
+            <a href="https://neetcode.io/roadmap" target="_blank" rel="noreferrer" className="p-2 ml-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
+              <Route className="w-4 h-4 text-secondary/60" />
+            </a>
+            <a href="https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/" target="_blank" rel="noreferrer" className="p-2 ml-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
+              <Code2 className="w-4 h-4 text-secondary/60" />
+            </a>
+            <a href="https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/" target="_blank" rel="noreferrer" className="p-2 ml-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
+              <BookOpen className="w-4 h-4 text-secondary/60" />
+            </a>
             <a href="https://github.com/IRX358/DSA_Q_checklist" target="_blank" rel="noreferrer" className="p-2 ml-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all">
               <Github className="w-4 h-4 text-secondary/60" />
             </a>
+            
           </div>
         </div>
       </header>
