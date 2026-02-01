@@ -73,7 +73,7 @@ const QuestionTable = ({ userProgress, onToggle }) => {
           </div>
     
           {/* Table - Matching Reference Site Exactly */}
-          <div className="overflow-hidden border border-white/5 bg-transparent rounded-xl">
+          <div className="overflow-hidden border border-white/5 glass-card rounded-2xl shadow-2xl">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
@@ -81,7 +81,7 @@ const QuestionTable = ({ userProgress, onToggle }) => {
                   <th className="px-6 py-5 text-[11px] uppercase tracking-widest font-bold text-white/30 w-32">Topic</th>
                   <th className="px-6 py-5 text-[11px] uppercase tracking-widest font-bold text-white/30">Problem Statement</th>
                   <th className="px-6 py-5 text-[11px] uppercase tracking-widest font-bold text-white/30 text-center w-32">Tier</th>
-                  <th className="px-6 py-5 text-[11px] uppercase tracking-widest font-bold text-white/30 text-right w-24">Status</th>
+                  <th className="px-6 py-5 text-[11px] uppercase tracking-widest font-bold text-white/30 text-center w-24">Status</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -92,7 +92,7 @@ const QuestionTable = ({ userProgress, onToggle }) => {
                       key={q.id} 
                       className={cn(
                         "group transition-all duration-200 hover:bg-white/[0.02]",
-                        isChecked && "bg-accent/5 opacity-60"
+                        isChecked && "bg-accent/[0.03] opacity-90"
                       )}
                     >
                       <td className="px-6 py-5 text-center font-mono text-sm text-white/40">
@@ -129,19 +129,20 @@ const QuestionTable = ({ userProgress, onToggle }) => {
                           {q.difficulty}
                         </span>
                       </td>
-                      <td className="px-6 py-5 text-right">
+                      <td className="px-6 py-5 text-center">
                         <button 
                           onClick={() => onToggle(q.id)}
-                          className="group/btn relative inline-flex items-center justify-center p-2 cursor-pointer"
+                          className="group/btn relative inline-flex items-center justify-center p-2 cursor-pointer transition-transform hover:scale-110 active:scale-95"
                         >
                           <div className={cn(
                               "w-6 h-6 rounded-lg border-2 transition-all flex items-center justify-center relative z-10",
                               isChecked 
-                                  ? "bg-accent border-accent shadow-[0_0_15px_rgba(168,85,247,0.4)]" 
-                                  : "border-white/20 group-hover/btn:border-white/40"
+                                  ? "bg-accent border-accent shadow-[0_0_20px_rgba(168,85,247,0.5)]" 
+                                  : "border-white/10 group-hover/btn:border-white/30"
                           )}>
-                              {isChecked && <Check className="w-4 h-4 text-white stroke-[3px]" />}
+                              {isChecked && <Check className="w-3.5 h-3.5 text-white stroke-[4px]" />}
                           </div>
+                          {/* Pulsing effect for checked state removed for cleaner look, but added hover scale instead */}
                         </button>
                       </td>
                     </tr>

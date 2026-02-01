@@ -78,7 +78,7 @@ const Dashboard = ({ userProgress }) => {
   const renderBarChart = () => {
     try {
         const margin = { top: 20, right: 30, bottom: 40, left: 80 };
-        const width = 450 - margin.left - margin.right;
+        const width = 500 - margin.left - margin.right;
         const rowHeight = 32;
         const chartHeight = topics.length * rowHeight;
         
@@ -140,7 +140,7 @@ const Dashboard = ({ userProgress }) => {
                         width={width} 
                         height={16} 
                         fill="white" 
-                        className="opacity-[0.03]" 
+                        className="opacity-[0.05]" 
                         rx="8" 
                     />
 
@@ -169,7 +169,7 @@ const Dashboard = ({ userProgress }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Overall Progress Section - Single Line Horizontal */}
-      <div className="lg:col-span-12 glass rounded-3xl p-6">
+      <div className="lg:col-span-12 glass rounded-3xl p-8">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-8">
             {/* Title */}
             <div className="flex items-center gap-3 shrink-0">
